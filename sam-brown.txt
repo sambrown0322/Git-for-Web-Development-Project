@@ -1,0 +1,91 @@
+    1. What is Semantic HTML? 
+    Tags that denote a certain meaning and style.
+    2. What is HTML used for?
+    Used for structure and content of a website. 
+    3. What is an attribute and where do we put it?
+    They add more functionality and info to elements. They go in the opening tag. 
+    4. What is the h1 tag used for? How many times should I use it on a page?
+    H1 is used for the most important heading/title on a page. Should only be used once on a page.
+    5. Name two tags that have required attributes
+    img, a
+    6. What do we put in the head of our HTML document? 
+    Title, Language, links to CSS and Javascript
+    7. What is an id?
+    Used to specify a single HTML element. 
+    8. What elements can I add an id to?
+     p, a, img, div, span, h1-h6, section, article, and more.
+    9. How many times can I use the same id on a page?
+    once 
+    10. What is a class?
+    Similar to an ID, but can be used for multiple elements. Adds specificity to tags. 
+    11. What elements can I add a class to?
+     p, a, img, div, span, h1-h6, section, article, and more.
+    12. How many times can I use the same class on a page?
+    As many as you want.
+    13. How do I get my link to open in a new tab?
+    target: _blank
+    14. What is the alt attribute in the image tag used for?
+    If the image cannot be displayed, provides a text description, 
+    15. How do I reference an id?
+    #idname
+    16. What is the difference between a section and a div
+    Sections mean the content inside is grouped and related to each other. Divs have no meaning, can be unrelated, and are used for styling.
+    17. What is CSS used for?
+    Adding style to a webpage. 
+    18. How to we select an element? Example - every h2 on the page
+    Type in the tag to CSS followed by {}. Ex. h2{
+
+    }
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one
+    Classes can be used for multiple elements, while IDs should only be used for one. Classes can be used to style multiple elements at once where you'd want the same styling for everything, whereas IDs would be used to target and style one specific element and nothing else.
+    20. How do we select classes in CSS?
+    .className
+    21. How do we select a p element with a single class of “human””?
+    p.human
+    22. What is a parent child selector? When would this be useful? 
+    Ex. div > p. This would select all p tags within a div tag. This would be useful in maintaining the same style on certain tags throughout a page.
+    23. How do you select all links within a div with the class of sidebar?
+    div.sidebar a 
+    24. What is a pseudo selector?
+    Pseudo-class is a keyword added to a selector that specifies a state of the element. p:hover could be used to change a paragraph when the user's pointer is hovered over it.
+    25. What do we use the change the spacing between lines?
+    Line-height:
+    26. What do we use to change the spacing between letters?
+    Letter-spacing:
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+    text-transform: uppercase, text-transform: lowercase, text-transform: capitalize
+    28. How do I add a 1px border around my div that is dotted and black?
+    div {
+        border: 1px dotted black;
+    }
+    29. How do I select everything on the page?
+    body 
+    30. How do I write a comment in CSS?
+    /* Comment goes here! */
+    31. How do I find out what file I am in, when I am using the command line?
+    pwd
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+    ls
+    33. How do I remove a file via the command line? Why do I have to be careful with this? 
+    rm. This permanently deleteds the file without any warning. 
+    34. Why should I use version control?
+    You can keep track of changes and revert to previous versions if needed. Multiple people can work on a single project at the same time. 
+    35. How often should I commit to github?
+    Every 20 minutes, whenever you make significant changes.
+    36. What is the command we would use to push our repo up to github?
+    git push -u origin branch-name
+    37. Walk me through Lambda's git flow. 
+    First fork the repo to create your own version. Add TL as a collaborator. Click "clone or download" and copy the url. Type git clone <url> into command line to clone the repo. Use cd to change directory into the repo. Type git checkout -b "firstname-lastname" to create a new branch for the repo. You can work on and make changes to this branch without affecting the master. Add changes by typing git add . Commit changes by typing git commit -m "helpful message." The message should detail what changes you've made. Push changes to github by typing git push -u origin branch-name. Go to github and make sure you select your forked copy from the dropdown menu. Next, click new pull request. Click the base repository dropdown menu and select your own forked repo. Add TL as a reviewer then submit pull request. TL will merge PR after they have reviewed it.
+
+Stretch Questions
+
+    1. What is the difference between an inline element and a block element?
+    Block- Spans the length of the browser. Inline- Only as large as it's content.
+    2. What happens when an element is positioned absolutely?
+    Children elements are positioned relative to their parent element (as long as parent element is in position:relative). If no parent exists, they are positioned based on the body element.  
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+    Inline-block
+    4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+    Block: div, h1-h6, p. Inline: span, img. Inline-block: button
+    5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
+    Every element in html can be thought of as a box. The box contains the content, padding, border, and margin. If a picture is 100px wide, and I add 4px of padding and a 2px border, the width of box is actually 112px. To "fix" this, you can use box-sizing: border-box, which will keep the image at 100px wide and the border and padding will take space from the image.
